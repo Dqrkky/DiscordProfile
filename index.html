@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dqrk</title>
+    </head>
+    <body>
+        <link rel="stylesheet" href="discord_profile.css" />
+        <section class="section-main">
+        </section>
+    </body>
+    <script type="module">
+        import discord_profile from "/discord_profile.js";
+        window.config = {
+            "discord_profile": new discord_profile.DiscordProfile({
+                "user": {
+                    "name": "Snlfn",
+                    "discriminator": "0000",
+                    "avatar": {
+                        "url": "https://d1fdloi71mui9q.cloudfront.net/DKJAs8lIQ7LPv6fMXNa0_94eE8OHT4i5cjb4k"
+                    }
+                },
+                "profile": {
+                    "status": "online"
+                }
+            })
+        }
+        const box_main = document.getElementsByClassName("section-main")[0]
+        box_main.appendChild(window.config.discord_profile.getHtml())
+    </script>
+</html>
